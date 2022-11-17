@@ -41,7 +41,7 @@ The script should do the following:
 
 <figure>
 
-<img src="../images/fake-menu.png" alt="Menu" width="300" />
+<img src="../images/Fake-menu.png" alt="Menu" width="300" />
 
 </figure>
 
@@ -73,3 +73,5 @@ Create a script that will do the following:
 
 Note: All the selection choices should be stored into a single file
 
+**Hints:**   
+- Use the ">>" redirection to append a file
