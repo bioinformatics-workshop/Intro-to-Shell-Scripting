@@ -5,6 +5,9 @@
 
 In this lesson, we will learn about variables and how to implement them.
 
+We will use the following script for this exercise:  
+[variables.sh](../scripts/variables.sh)
+
 ## What are variables?
 ---
 Variables are names we used to assign values and then read and manipulate contents. Variables can hold a string, integers, real numbers, etc. Variables are typically all uppercase by convention.
@@ -26,7 +29,7 @@ MY NAME="Brandon" # variable names can't have spaces
 ```
 ## Executing math with variables
 ---
-
+Set values for variables
 ```
 NUM1=10
 NUM2=20

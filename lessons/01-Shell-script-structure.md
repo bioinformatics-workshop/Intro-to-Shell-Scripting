@@ -5,10 +5,12 @@
 
 In this lesson, we will get familiar with the structure of a shell script and how to run the script.
 
+We will use the following script for this exercise:  
+[my-first-script.sh](../scripts/my-first-script.sh)
+
 
 ## A basic shell script 
 ---
-[my-first-script.sh](../scripts/my-first-script.sh)
 ```
 1 #!/bin/sh
 2 
