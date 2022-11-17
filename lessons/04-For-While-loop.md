@@ -27,6 +27,7 @@ do
 echo "Hello $NAME"
 done
 ```
+
 Example 2:
 ```
 for num in 1 2 3 4 5
@@ -59,7 +60,7 @@ done
 ```
 
 Example 2:
-Useful for reading in files with multiple columns as a
+Useful for reading in files with multiple columns as variables
 ```
 while IFS="," read -r fname lname character
 do
@@ -67,7 +68,9 @@ do
 done < examples/superheroes.csv
 ```
 **IFS=","** : this specify the internal field separator is a comma  
-**read -r** : read in a long line where backslash does not act as an escape character
+**read -r** : read in a long line where backslash does not act as an escape character  
+**< examples/superheroes.csv** : file containing info that's feeding into the loop
+
 
 ## CASE Loop
 ---
