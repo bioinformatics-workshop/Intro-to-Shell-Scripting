@@ -56,7 +56,7 @@ Entrees:
     E1 - Fragrant chicken and almond curry
     E2 - Idaho Red Trout
     E3 - Fricassee of wild mushrooms
-    E4 - Tenderloin of Beed Wellington
+    E4 - Tenderloin of Beef Wellington
 
 Desserts:
 
@@ -75,3 +75,106 @@ Note: All the selection choices should be stored into a single file
 
 **Hints:**   
 - Use the ">>" redirection to append a file
+
+
+## Solutions
+---
+Below are some solutions for this exercise including solutions provided by workshop attendees.
+
+### Project Directory - Solution 1 
+([create-proj-directory.sh](../scripts/create-proj-directory.sh))
+```
+#!/bin/sh
+
+# This shell script will create a project directory with sub-directories and files
+# based on the user-specified project name
+
+# Get the project name
+echo "What's the project name?"
+read -p "Enter the project name:
+(Use only characters, numbers, or underscore) " PROJ_NAME
+
+# Check whether project name already exists
+
+if [ -d $PROJ_NAME ]
+then
+    echo "This project name already exists"
+else
+    for FOLDER in raw code report
+    do 
+        mkdir -p $PROJ_NAME/${FOLDER}
+    done
+    touch $PROJ_NAME/README.md 
+    for NUM in 1 2 3 4 5
+    do 
+        mkdir -p $PROJ_NAME/analysis/analysis${NUM}
+    done
+fi 
+
+# Visualize new project folder (optional)
+tree $PROJ_NAME
+```
+### Project Directory - Solution 2 ([create-proj-directory-student1.sh](../scripts/create-proj-directory-student1.sh))
+```
+#!/bin/sh
+read -p "what is your project name? " PROJECT_NAME
+NAMES="raw code report analysis"
+if [ -d $PROJECT_NAME ]
+then
+    echo "Project folder already exists"
+else
+    echo "Creating files and folders..."
+    mkdir $PROJECT_NAME
+    for NAME in $NAMES
+    do
+        mkdir $PROJECT_NAME/$NAME
+    done
+    for num in 1 2 3 4 5
+    do
+        mkdir $PROJECT_NAME/analysis/analysis$num
+    done
+    touch $PROJECT_NAME/README.md
+fi
+```
+### Project Directory - Solution 3 ([create-proj-directory-student2.sh](../scripts/create-proj-directory-student2.sh))
+```
+#!/bin/bash
+# Ask the user for their name
+echo Hello, what is the name of the directory?
+
+read varname
+
+
+#check if foldername exist.
+
+while [ -d $varname ]
+do
+       echo Directory $varname exist, please provide a new name
+       read varname
+done
+
+#making folder and subfolder
+echo As you wish, making directory $varname
+mkdir $varname
+touch $varname/README.md
+mkdir $varname/raw
+mkdir $varname/code
+mkdir $varname/report
+mkdir $varname/analysis
+mkdir $varname/analysis/analysis{1..5}
+```
+
+### Dinner menu - Solution 1 ([create-dinner-menu.sh](../scripts/create-dinner-menu.sh))
+```
+
+
+```
+
+### Dinner menu - Solution 2 ([create-dinner-menu-student1.sh](../scripts/create-dinner-menu-student1.sh))
+```
+
+
+```
+
+### Dinner menu - Solution 3 ([create-dinner-menu-student2.sh](../scripts/create-dinner-menu-student2.sh))
+```
